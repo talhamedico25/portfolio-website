@@ -40,29 +40,8 @@ body {
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-}
-
-.nav-logo .signature {
-    font-size: 32px;
-    font-weight: bold;
-    color: #ffffff;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    font-style: italic;
-    transform: rotate(-5deg);
-    position: relative;
-}
-
-.nav-logo .signature::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, #ffffff, transparent);
-    border-radius: 2px;
 }
 
 .nav-menu {
@@ -101,6 +80,46 @@ body {
 .hero-content {
     max-width: 800px;
     padding: 0 20px;
+}
+
+/* Signature Logo */
+.signature-logo {
+    font-size: 6rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
+    font-style: italic;
+    transform: rotate(-8deg);
+    position: relative;
+    margin-bottom: 30px;
+    display: inline-block;
+    font-family: 'Brush Script MT', cursive, 'Raleway', sans-serif;
+    filter: drop-shadow(2px 2px 4px rgba(255, 255, 255, 0.3));
+}
+
+.signature-logo::before {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: -10px;
+    width: 120%;
+    height: 4px;
+    background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.7) 50%, transparent 100%);
+    border-radius: 3px;
+    transform: rotate(3deg);
+}
+
+.signature-logo::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffffff;
+    border-radius: 50%;
+    opacity: 0.4;
+    transform: rotate(15deg);
 }
 
 .hero-title {
@@ -282,8 +301,8 @@ section {
         align-items: center;
     }
     
-    .nav-logo .signature {
-        font-size: 24px;
+    .signature-logo {
+        font-size: 4rem;
     }
 }
 
@@ -315,7 +334,7 @@ section {
 /* Additional Glow Effects */
 .hero-title,
 .section-title,
-.nav-logo .signature {
+.signature-logo {
     animation: subtle-glow 3s ease-in-out infinite alternate;
 }
 

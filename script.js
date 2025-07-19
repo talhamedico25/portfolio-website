@@ -135,16 +135,16 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // Add signature animation on page load
-    const signature = document.querySelector('.signature');
+    const signature = document.querySelector('.signature-logo');
     if (signature) {
         signature.style.opacity = '0';
-        signature.style.transform = 'rotate(-5deg) scale(0.8)';
+        signature.style.transform = 'rotate(-8deg) scale(0.8)';
         
         setTimeout(() => {
-            signature.style.transition = 'all 0.8s ease';
+            signature.style.transition = 'all 1.2s ease';
             signature.style.opacity = '1';
-            signature.style.transform = 'rotate(-5deg) scale(1)';
-        }, 500);
+            signature.style.transform = 'rotate(-8deg) scale(1)';
+        }, 200);
     }
 });
 
